@@ -33,37 +33,37 @@ class BookViewSet(viewsets.ModelViewSet):
 #        return HttpResponse(self.output)
 
 
-class BookList(View):
-
-    books = Book.objects.all()
-    output = 'All Books:<br>'
-
-    for book in books:
-        output += f"We have {book.title} book with ID {book.id}<br>"
-
-    def get(self, request):
-        return HttpResponse(self.output)
-
-
-class BookListPublished(View):
-
-    books = Book.objects.filter(is_published=True)
-    output = 'All Published Books:<br>'
-
-    for book in books:
-        output += f"We have {book.title} book with ID {book.id}<br>"
-
-    def get(self, request):
-        return HttpResponse(self.output)
+#class BookList(View):
+#
+#    books = Book.objects.all()
+#    output = 'All Books:<br>'
+#
+#    for book in books:
+#        output += f"We have {book.title} book with ID {book.id}<br>"
+#
+#    def get(self, request):
+#        return HttpResponse(self.output)
 
 
-class Book2(View):
+#class BookListPublished(View):
+#
+#    books = Book.objects.filter(is_published=True)
+#    output = 'All Published Books:<br>'
+#
+#    for book in books:
+#        output += f"We have {book.title} book with ID {book.id}<br>"
+#
+#    def get(self, request):
+#        return HttpResponse(self.output)
 
-    book = Book.objects.get(id=2)
-    output = f"We have {book.title} book with ID {book.id}<br>"
 
-    def get(self, request):
-        return HttpResponse(self.output)
+#class Book2(View):
+#
+#    book = Book.objects.get(id=2)
+#    output = f"We have {book.title} book with ID {book.id}<br>"
+#
+#    def get(self, request):
+#        return HttpResponse(self.output)
 
 
 def first(request):
