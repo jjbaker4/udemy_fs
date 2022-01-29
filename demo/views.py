@@ -23,14 +23,14 @@ class BookViewSet(viewsets.ModelViewSet):
 #        return HttpResponse('This is another function inside a class')
 
 
-class BookCount(View):
-
-    books = Book.objects.all()
-
-    output = f"We have {len(books)} books in DB"
-
-    def get(self, request):
-        return HttpResponse(self.output)
+#class BookCount(View):
+#
+#    books = Book.objects.all()
+#
+#    output = f"We have {len(books)} books in DB"
+#
+#    def get(self, request):
+#        return HttpResponse(self.output)
 
 
 class BookList(View):
